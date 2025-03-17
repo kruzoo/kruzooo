@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МебельДом - Каталог</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./index.html">Вернуться на главную</a></li>
+        </ul>
+    </nav>
+    <style>
+        nav ul li a {
+    color: #000000;
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 22px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db; /* Голубой цвет при наведении вместо зеленого */
+}
+    </style>
+    <section class="catalog-section">
+        <div class="catalog-content animate__animated animate__fadeIn">
+            <h1 class="animate__animated animate__slideInDown"></h1>
+
+            <div class="filters animate__animated animate__fadeInUp">
+               
+            </div>   
+                <div class="filter-group">
+                    <h3>Категории мебели</h3>
+                    <div class="filter-options" id="category-filters">
+                        <div class="filter-option" data-category="all">Все</div>
+                        <div class="filter-option" data-category="sofas">Диваны</div>
+                        <div class="filter-option" data-category="chairs">Кресла</div>
+                        <div class="filter-option" data-category="tables">Столы</div>
+                        <div class="filter-option" data-category="beds">Кровати</div>
+                        <div class="filter-option" data-category="wardrobes">Шкафы</div>
+                        <div class="filter-option" data-category="dressers">Комоды</div>
+                    </div>
+                </div>
+
+                
+
+                <div class="filter-group">
+                    <h3>Сортировка</h3>
+                    <div class="sort-options">
+                        <div class="sort-option" data-sort="default">По умолчанию</div>
+                        <div class="sort-option" data-sort="price-asc">По цене ↑</div>
+                        <div class="sort-option" data-sort="price-desc">По цене ↓</div>
+                        <div class="sort-option" data-sort="name">По названию</div>
+                        <div class="sort-option" data-sort="popular">По популярности</div>
+                        <div class="sort-option" data-sort="new">По новизне</div>
+                    </div>
+                </div>
+            </div>
+            <div class="filters">
+                <!-- Существующие фильтры -->
+                
+                <!-- Добавьте этот блок для ценового фильтра -->
+                <div class="price-filter">
+                    <h3>Цена</h3>
+                    <div class="price-inputs">
+                        <input type="number" id="price-min" placeholder="От" min="0">
+                        <input type="number" id="price-max" placeholder="До">
+                    </div>
+                </div>
+                
+                <!-- Добавьте счетчик товаров -->
+                <div id="product-count" class="product-count">
+                    Найдено товаров: 0
+                </div>
+                
+                <!-- Кнопка сброса фильтров -->
+                <button class="reset-filters-btn">Сбросить фильтры</button>
+            </div>
+            <h2 class="animate__animated animate__slideInLeft">Наши товары</h2>
+            <div class="products-grid" id="products-container">
+                <!-- Товары будут добавлены через JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Иконка корзины -->
+    <div class="cart-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 18C5.9 18 5.01 18.9 5.01 20C5.01 21.1 5.9 22 7 22C8.1 22 9 21.1 9 20C9 18.9 8.1 18 7 18ZM1 2V4H3L6.6 11.59L5.25 14.04C5.09 14.32 5 14.65 5 15C5 16.1 5.9 17 7 17H19V15H7.42C7.28 15 7.17 14.89 7.17 14.75L7.2 14.63L8.1 13H15.55C16.3 13 16.96 12.59 17.3 11.97L20.88 5.48C20.96 5.34 21 5.17 21 5C21 4.45 20.55 4 20 4H5.21L4.27 2H1Z" fill="white"/>
+        </svg>
+        <span class="cart-counter">0</span>
+    </div>
+
+    <!-- Модальное окно корзины -->
+    <div class="cart-modal">
+        <div class="cart-modal-header">
+            <h2>Моя корзина</h2>
+            <button class="close-cart">&times;</button>
+        </div>
+        
+        <div class="cart-modal-footer">
+            <div class="cart-total">
+                <span>Итого:</span>
+                <span class="cart-total-amount">0 ₽</span>
+            </div>
+            <button class="checkout-button">Оформить заказ</button>
+        </div>
+
+        <div class="cart-items">
+            <!-- Товары будут добавляться динамически -->
+        </div>
+    </div>
+    <div class="products-grid" id="products-container">
+        <!-- Товары будут добавлены через JavaScript -->
+    </div>
+    <footer>
+        <p>© 2023 МебельДом. Все права защищены.</p>
+        <p>Телефон: +7 (123) 456-78-90</p>
+        <p>Email: info@mebeldom.ru</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

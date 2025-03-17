@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Помощь - МебельДом</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./index.html">Вернуться на главную</a></li>
+        </ul>
+    </nav>
+    <style>
+        nav ul li a {
+    color: #000000;
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 22px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db; /* Голубой цвет при наведении вместо зеленого */
+}
+    </style>
+    <section class="help-section">
+        <div class="help-content animate__animated animate__fadeIn">
+            <h1 class="animate__animated animate__slideInDown">Помощь клиентам</h1>
+            
+            <h2 class="animate__animated animate__slideInLeft">Часто задаваемые вопросы</h2>
+            <div class="faq-item animate__animated animate__fadeInUp">
+                <div class="faq-question">Как оформить заказ?</div>
+                <div class="faq-answer">Выберите товар в каталоге, добавьте его в корзину и следуйте инструкциям по оформлению заказа. При возникновении вопросов наши менеджеры всегда готовы помочь вам.</div>
+            </div>
+
+            <div class="faq-item animate__animated animate__fadeInUp">
+                <div class="faq-question">Какие способы оплаты доступны?</div>
+                <div class="faq-answer">Мы принимаем оплату наличными при доставке, банковскими картами онлайн или при получении, а также банковским переводом для юридических лиц.</div>
+            </div>
+
+            <div class="faq-item animate__animated animate__fadeInUp">
+                <div class="faq-question">Как осуществляется доставка?</div>
+                <div class="faq-answer">Доставка осуществляется по всей России. В Москве доставка производится в течение 1-2 дней. Сроки доставки в регионы зависят от удаленности.</div>
+            </div>
+
+            <div class="faq-item animate__animated animate__fadeInUp">
+                <div class="faq-question">Предоставляете ли вы гарантию?</div>
+                <div class="faq-answer">Да, на всю мебель предоставляется гарантия от 12 до 36 месяцев в зависимости от категории товара.</div>
+            </div>
+
+            <h2 class="animate__animated animate__slideInLeft">Способы связи</h2>
+            <div class="contact-methods">
+                <div class="contact-method animate__animated animate__fadeInUp">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3059/3059590.png" alt="Телефон" class="contact-icon">
+                    <h3>Телефон</h3>
+                    <p>+7 (123) 456-78-90</p>
+                    <p>Ежедневно с 9:00 до 21:00</p>
+                </div>
+
+                <div class="contact-method animate__animated animate__fadeInUp">
+                    <img src="https://cdn-icons-png.flaticon.com/128/552/552486.png" alt="Email" class="contact-icon">
+                    <h3>Email</h3>
+                    <p>help@mebeldom.ru</p>
+                    <p>Ответ в течение 24 часов</p>
+                </div>
+            </div>
+
+            <h2 class="animate__animated animate__slideInLeft">Оставить обращение</h2>
+            <div class="complaint-section animate__animated animate__fadeInUp">
+                <form class="complaint-form">
+                    <div class="form-group">
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="order-number">Номер заказа (если есть):</label>
+                        <input type="text" id="order-number" name="order-number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="complaint-type">Тип обращения:</label>
+                        <select id="complaint-type" name="complaint-type" required>
+                            <option value="">Выберите тип обращения</option>
+                            <option value="complaint">Жалоба</option>
+                            <option value="return">Возврат товара</option>
+                            <option value="quality">Претензия по качеству</option>
+                            <option value="service">Претензия к обслуживанию</option>
+                            <option value="suggestion">Предложение по улучшению</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Текст обращения:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="file">Прикрепить файл (фото, документ):</label>
+                        <input type="file" id="file" name="file">
+                    </div>
+
+                    <button type="submit" class="submit-btn">Отправить обращение</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2023 МебельДом. Все права защищены.</p>
+        <p>Телефон: +7 (123) 456-78-90</p>
+        <p>Email: info@mebeldom.ru</p>
+    </footer>
+</body>
+</html>
